@@ -1,6 +1,5 @@
 import { FC, ReactNode } from 'react';
 import { Container } from '@chakra-ui/react';
-import { Header } from 'components/modules';
 import Head from 'next/head';
 
 const Default: FC<{ children: ReactNode; pageName: string }> = ({ children, pageName }) => (
@@ -9,7 +8,6 @@ const Default: FC<{ children: ReactNode; pageName: string }> = ({ children, page
       <title>{`${pageName}`}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Header />
     <Container maxW="container.lg" p={3} marginTop={100} as="main" minH="70vh">
       {children}
     </Container>
