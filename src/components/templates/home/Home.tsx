@@ -45,8 +45,8 @@ const Home = () => {
     <>
       <Heading size="lg" marginBottom={6}>
         Wallet
+        <ConnectButton />
       </Heading>
-      <ConnectButton />
       <Box padding="24px">Funds</Box>
       {tokenBalances?.length ? (
         <Box border="0" borderColor={hoverTrColor} borderRadius="xl" padding="24px 18px">
@@ -66,6 +66,7 @@ const Home = () => {
                         </VStack>
                       </HStack>
                     </Td>
+                    <Td>{value}</Td>
                   </Tr>
                 ))}
               </Tbody>
