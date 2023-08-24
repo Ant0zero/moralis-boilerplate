@@ -88,17 +88,7 @@ const Home = () => {
           </TableContainer>
         </Box>
       ) : (
-        <><Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>NFT Balances</Box>
-      {nfts?.length ? (
-        <Grid templateColumns="repeat(auto-fit, minmax(280px, 1fr))" gap={6}>
-          {nfts.map((nft, key) => (
-            <NFTCard nft={nft} key={key} />
-          ))}
-        </Grid>
-      ) : (
-        <Box>Looks Like you do not have any NFTs</Box>
-      )}
-      )}
+        <Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>
     </>
   );
 };
