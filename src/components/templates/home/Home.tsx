@@ -78,7 +78,7 @@ const Home = () => {
           </TableContainer>
         </Box>
       ) : (
-        <Box>Looks Like you do not have any ERC20 tokens</Box>
+        <Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>
       )}
     </>
   );
