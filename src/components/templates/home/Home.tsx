@@ -37,6 +37,8 @@ const Home = () => {
       <Heading size="lg" marginBottom={6}>
         Funds
       </Heading>
+      <ConnectButton />
+      <ColorModeButton />
       {tokenBalances?.length ? (
         <Box border="2px" borderColor={hoverTrColor} borderRadius="xl" padding="24px 18px">
           <TableContainer w={'full'}>
