@@ -21,7 +21,7 @@ import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { getEllipsisTxt } from 'utils/format';
 import { useNetwork } from 'wagmi';
-import { Box, Grid, Heading } from '@chakra-ui/react';
+import { Grid } from '@chakra-ui/react';
 import { useEvmWalletNFTs } from '@moralisweb3/next';
 import { NFTCard } from 'components/modules';
 
@@ -88,8 +88,7 @@ const Home = () => {
           </TableContainer>
         </Box>
       ) : (
-        <Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>
-        <Box>NFT Balances</Box>
+        <><Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>NFT Balances</Box>
       {nfts?.length ? (
         <Grid templateColumns="repeat(auto-fit, minmax(280px, 1fr))" gap={6}>
           {nfts.map((nft, key) => (
