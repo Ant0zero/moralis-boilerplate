@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <>
       <Heading size="lg" marginBottom={6}>
-        ERC20 Balances
+        Funds
       </Heading>
       {tokenBalances?.length ? (
         <Box border="2px" borderColor={hoverTrColor} borderRadius="xl" padding="24px 18px">
