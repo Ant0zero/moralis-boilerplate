@@ -66,8 +66,6 @@ const Home = () => {
                         </VStack>
                       </HStack>
                     </Td>
-                    <Td>{value}</Td>
-                    <Td isNumeric>{getEllipsisTxt(token?.contractAddress.checksum)}</Td>
                   </Tr>
                 ))}
               </Tbody>
