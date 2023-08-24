@@ -47,7 +47,7 @@ const Home = () => {
         Wallet
       </Heading>
       <ConnectButton />
-      <Box>Funds</Box>
+      <Box padding="24px">Funds</Box>
       {tokenBalances?.length ? (
         <Box border="0" borderColor={hoverTrColor} borderRadius="xl" padding="24px 18px">
           <TableContainer w={'full'}>
@@ -75,7 +75,7 @@ const Home = () => {
       ) : (
         <Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>
       )}
-      <Box>NFTs</Box>
+      <Box padding="24px">NFTs</Box>
       {nfts?.length ? (
         <Grid templateColumns="repeat(auto-fit, minmax(280px, 1fr))" gap={6}>
           {nfts.map((nft, key) => (
