@@ -33,8 +33,13 @@ const Home = () => {
     address: data?.user?.address,
     chain: chain?.id,
   });
+  const { data: nfts } = useEvmWalletNFTs({
+    address: data?.user?.address,
+    chain: chain?.id,
+  });
 
   useEffect(() => console.log('tokenBalances: ', tokenBalances), [tokenBalances]);
+  useEffect(() => console.log('nfts: ', nfts), [nfts]);
 
   return (
     <>
@@ -84,26 +89,7 @@ const Home = () => {
         </Box>
       ) : (
         <Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>
-      )}
-    </>
-  );
-};
-
-const NFTBalances = () => {
-  const { data } = useSession();
-  const { chain } = useNetwork();
-  const { data: nfts } = useEvmWalletNFTs({
-    address: data?.user?.address,
-    chain: chain?.id,
-  });
-
-  useEffect(() => console.log('nfts: ', nfts), [nfts]);
-
-  return (
-    <>
-      <Heading size="lg" marginBottom={6}>
-        NFT Balances
-      </Heading>
+        <Box>NFT Balances</Box>
       {nfts?.length ? (
         <Grid templateColumns="repeat(auto-fit, minmax(280px, 1fr))" gap={6}>
           {nfts.map((nft, key) => (
@@ -112,6 +98,7 @@ const NFTBalances = () => {
         </Grid>
       ) : (
         <Box>Looks Like you do not have any NFTs</Box>
+      )}
       )}
     </>
   );
