@@ -89,6 +89,7 @@ const Home = () => {
         </Box>
       ) : (
         <Box>Connect your wallet to see your RH20 balance and buy GH2O</Box>
+      )}
     </>
   );
 };
