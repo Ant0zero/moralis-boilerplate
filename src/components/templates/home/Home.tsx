@@ -16,6 +16,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { useEvmWalletTokenBalances } from '@moralisweb3/next';
+import { ConnectButton } from 'components/modules/ConnectButton';
 import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { getEllipsisTxt } from 'utils/format';
@@ -38,7 +39,6 @@ const Home = () => {
         Funds
       </Heading>
       <ConnectButton />
-      <ColorModeButton />
       {tokenBalances?.length ? (
         <Box border="2px" borderColor={hoverTrColor} borderRadius="xl" padding="24px 18px">
           <TableContainer w={'full'}>
