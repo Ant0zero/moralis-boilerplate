@@ -49,16 +49,9 @@ const Home = () => {
       <ConnectButton />
       <Box>Funds</Box>
       {tokenBalances?.length ? (
-        <Box border="2px" borderColor={hoverTrColor} borderRadius="xl" padding="24px 18px">
+        <Box border="0" borderColor={hoverTrColor} borderRadius="xl" padding="24px 18px">
           <TableContainer w={'full'}>
             <Table>
-              <Thead>
-                <Tr>
-                  <Th>Token</Th>
-                  <Th>Value</Th>
-                  <Th isNumeric>Address</Th>
-                </Tr>
-              </Thead>
               <Tbody>
                 {tokenBalances?.map(({ token, value }, key) => (
                   <Tr key={`${token?.symbol}-${key}-tr`} _hover={{ bgColor: hoverTrColor }} cursor="pointer">
@@ -78,13 +71,6 @@ const Home = () => {
                   </Tr>
                 ))}
               </Tbody>
-              <Tfoot>
-                <Tr>
-                  <Th>Token</Th>
-                  <Th>Value</Th>
-                  <Th isNumeric>Address</Th>
-                </Tr>
-              </Tfoot>
             </Table>
           </TableContainer>
         </Box>
